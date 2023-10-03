@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-const d = "duration";
-const UserInput = () => {
+const UserInput = (props) => {
+  const d = "duration";
   const initialUserInput = {
     "current-savings": 10000,
     "yearly-contribution": 1200,
@@ -14,6 +14,7 @@ const UserInput = () => {
   //form submit
   const submitHandler = (e) => {
     e.preventDefault();
+    props.onCalculate(userInput);
   };
 
   //reseting values
@@ -26,7 +27,6 @@ const UserInput = () => {
     setUserInput((prev) => ({ ...prev, [identifier]: value }));
   };
 
-  console.log(userInput);
   return (
     <form onSubmit={submitHandler} className="form">
       <div className="input-group">
