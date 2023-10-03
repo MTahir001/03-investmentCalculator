@@ -24,7 +24,8 @@ const UserInput = (props) => {
 
   //input feild updating
   const inputChangeHandler = (identifier, value) => {
-    setUserInput((prev) => ({ ...prev, [identifier]: value }));
+    //unary '+' is attached to convert string -> number
+    setUserInput((prev) => ({ ...prev, [identifier]: +value }));
   };
 
   return (

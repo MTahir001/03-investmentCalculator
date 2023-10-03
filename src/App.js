@@ -10,10 +10,10 @@ function App() {
   };
   const yearlyData = [];
   if (userInput) {
-    let currentSavings = +userInput["current-savings"];
-    const yearlyContribution = +userInput["yearly-contribution"];
-    const expectedReturn = +userInput["expected-return"] / 100;
-    const duration = +userInput["duration"];
+    let currentSavings = userInput["current-savings"];
+    const yearlyContribution = userInput["yearly-contribution"];
+    const expectedReturn = userInput["expected-return"] / 100;
+    const duration = userInput["duration"];
 
     // The below code calculates yearly results (total savings, interest etc)
     for (let i = 0; i < duration; i++) {
