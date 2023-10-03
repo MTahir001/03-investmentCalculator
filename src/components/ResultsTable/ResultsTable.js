@@ -1,3 +1,4 @@
+import styles from "./ResultsTable.module.css";
 const ResultsTable = (props) => {
   const formatter = new Intl.NumberFormat("en-US", {
     style: "currency",
@@ -6,7 +7,7 @@ const ResultsTable = (props) => {
     maximumFractionDigits: 2,
   });
   return (
-    <table className="result">
+    <table className={styles.result}>
       <thead>
         <tr>
           <th>Year</th>
